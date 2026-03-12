@@ -1,0 +1,1633 @@
+@charset "utf-8";
+
+header,
+body {
+  font-family: 'Zen Kaku Gothic New','Noto Sans JP',sans-serif;
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, .8);
+  
+}
+header {
+  width: 375px;
+  height: 667px;
+  background-image: url(../images/taiNanTop/spTainanFullHero.png);
+  background-size: 375px 667px;
+  position: relative;
+}
+
+.logo {
+  width: 111px;
+  height: 45px;
+  position: absolute;  
+  top: 10px;
+  left: 20px;
+  background: url('../images/share/spLogotype.svg') no-repeat center/contain;
+}
+.header_main-logo {
+  width: 199px;
+  height: 372px;
+  position: absolute;  
+  top: 120px;
+  left: 88px;
+  background: url('../images/taiNanTop/spTainanMainLogo.svg') no-repeat center/contain;
+}
+.header__social-icon--facebook,
+.header__social-icon--instagram {
+  width: 32px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  top: 461px; /* ←これで下に100pxずらす */
+}
+.header__social-icon--twitter {
+  position: relative;
+  top: 461px; /* ←これで下に100pxずらす */
+  padding-left: 20px;
+}
+ h1 {
+  font-size: 12px;
+  line-height: 1.6;
+  width: 247px;
+  color: #FFF;
+  font-weight: 700;/* Bold = 700 */
+  background-color: rgba(255, 255, 255, .0);
+  text-align: left;
+ 
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  margin-top: 460px;
+  margin-left: 108px;
+  margin-bottom: 20px;
+}
+/*/////////////////////////////////////
+///////////// パンくずメニュー ////////////
+/////////////////////////////////////*/
+.header_nav {
+  height: 20px;
+  border-bottom: #000 solid 1px;
+
+}
+.header_nav ul {
+    list-style: none;
+    display: flex;          /* 横並び */
+    gap: 4px;               /* 隙間調整 */
+    padding: 0;
+    margin-left: 15px;
+}
+
+.header_nav li {
+    position: relative;
+}
+
+.header_nav a {
+    color: #000;      /*デフォ青いから黒に！*/
+    text-decoration: none; /* デフォの下線消す */
+}
+
+.header_nav a:hover {
+   color: rgba(0, 0, 0, 0.25); /* ホバーしたら透明度アップ */
+}
+
+/* li の後ろに > を入れる */
+.header_nav li + li::before {
+    content: "＞";
+    margin: 0 4px;
+    color: #000;
+}
+
+/* 最初の li には > を付けない */
+.header_nav li:first-child::before {
+    content: none;
+}
+
+/*/////////////////////////////////////
+/////////////// 観光名所 ///////////////
+/////////////////////////////////////*/
+
+.attraction-section {
+  width: 375px;
+  margin-top: 20px;
+}
+
+h2 {
+  padding-top: 20px;
+  margin-bottom: 40px;
+}
+.attraction_title-en{font-size: 24px; text-transform: capitalize;}
+.section_title-en {font-size: 24px; text-transform: capitalize;}
+.pickup_title-en {font-size: 24px; text-transform: capitalize;}
+.attraction_title-ja {font-size: 12px;}
+.section_title-ja {font-size: 12px;}
+.pickup_title-ja {font-size: 12px;}
+
+
+.attraction_title,
+.section-title,
+.pickup_title {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+.section-title {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+
+.attraction_title::after,
+.section-title::after,
+.pickup_title::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;   /* 背景画像の幅 */
+  height: 40px;   /* 背景画像の高さ */
+  background-image: url(../images/share/spHeadingBackGroundImage.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.attraction_name {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.attraction_image {
+  background-image: url(../images/taiNanAttraction/spYanpingStreetMain.png);
+  margin: 0 auto;
+  width: 295px;
+  height: 221px;
+  background-size: cover; 
+  margin-bottom: 20px;
+  text-align: center;
+}
+.attraction_description {
+  margin: 20px 40px 20.4px;
+  width: 295px;
+  padding: 8px 36px;
+  background-color: rgba(100, 201, 155, .8);
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #333;
+
+}
+.attraction_gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 10px 0;  
+  gap: 20px;
+}
+.attraction_gallery-image1 {
+  background-image: url(../images/taiNanAttraction/spYanpingStreetSubMain1.png);
+  width: 137.5px;
+  height: 150px;
+  background-size: cover; 
+}
+.attraction_gallery-image2 {
+  background-image: url(../images/taiNanAttraction/spYanpingStreetSubMain2.png);
+  width: 137.5px;
+  height: 150px;
+  background-size: cover;
+}
+.attraction_info {
+  margin: 20px auto 40px;
+  width: 295px;
+  padding: 8px 34px 8px 32px;
+  background-color: rgba(100, 201, 155, .8);
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+.attraction_time {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.attraction_tower {
+  width: 296px;
+  margin: 40px auto 39px;
+}
+
+.attraction_tower_image {
+  background-image: url(../images/taiNanAttraction/spAkakuroMain.png);
+  margin: 0 auto;
+  width: 295px;
+  height: 221px;
+  background-size: cover; 
+  margin-bottom: 20px;
+}
+.attraction_tower_description {
+  margin: 20px auto;
+  width: 295px;
+  padding: 8px 36px;
+  background-color: rgba(100, 201, 155, .8);
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.attraction_tower_image1 {
+  background-image: url(../images/taiNanAttraction/spAkakuroSubMain1.png);
+  width: 137.5px;
+  height: 150px;
+  background-size: cover;
+}
+.attraction_tower_image2 {
+  background-image: url(../images/taiNanAttraction/spAkakuroSubMain2.png);
+  width: 137.5px;
+  height: 150px;
+  background-size: cover;
+}
+
+.attraction-tower_gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+}
+/*/////////////////////////////////////
+//////////////// グルメ ////////////////
+/////////////////////////////////////*/
+
+.gourmet-section {
+  width: 375px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.section-intro {
+  margin: 8px auto;
+  width: 223px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.gourmet-card--ramen {
+  width: 335px;
+  margin: 0 auto 40px;
+}
+.gourmet-card--rice {
+  width: 335px;
+  margin: 0 auto 40px;
+}
+.gourmet_title-ch  {
+  font-size: 32px;
+  text-align: center;
+  margin-top: 40px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+}
+
+.gourmet_title-ja  {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 5px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+}
+
+.gourmet-description {
+  width: 223px;
+  text-align: left;
+  margin: 8px auto;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.gourmet-card-image--ramen {
+  display: block;
+  background-image: url(../images/taiNanGourmet/spDoshougetsu.png);
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  width: 335px;
+  height: 130px;
+}
+
+.gourmet-card-image--rice {
+  display: block;
+  background-image: url(../images/taiNanGourmet/spATsaiCheng.png);
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  width: 335px;
+  height: 130px;
+}
+.gourmet-card-description {
+  width: 223px;
+  text-align: left;
+  margin: 8px auto;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+.gourmet-card-action {
+  width: 223px;
+  margin: 0 auto 20px;
+  text-align: right;
+}
+.gourmet-item_image--shoronpo {
+  background-image: url(../images/taiNanGourmet/spShanghaiHuaduSnacks.png);
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  width: 335px;
+  height: 130px;
+}
+
+.gourmet-item_image--duckrice {
+  background-image: url(../images/taiNanGourmet/spYaDeDangGuiYa.png);
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  width: 335px;
+  height: 130px;
+}
+.gourmet-item_action {
+  width: 223px;
+  margin: 0 auto 20px;
+  text-align: right;
+}
+
+.gourmet-item_description {
+  width: 223px;
+  text-align: left;
+  margin: 8px auto;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.6;
+}
+/* 料理ごとの指定 */
+.gourmet-card:nth-child(1) .gourmet-card-image {
+  background-image: url(../images/taiNanGourmet/spDoshougetsu.png);
+}
+
+.gourmet-card:nth-child(2) .gourmet-card-image {
+  background-image: url(../images/taiNanGourmet/spATsaiCheng.png);
+}
+
+
+.gourmet-item_image--duckrice {
+  background-image: url(../images/taiNanGourmet/spYaDeDangGuiYa.png);
+}
+.gourmet-item {
+  width: 375px;
+}
+/*/////////////////////////////////////
+//////////////// pick up //////////////
+/////////////////////////////////////*/
+.pickup {
+  width: 375px;
+  margin-top: 40px;
+}
+.pickup_subtitle {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 12px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+}
+.pickup_intro {
+  margin: 0 auto;
+  width: 223px;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.pickup_image--main {
+  background-image: url(../images/taiNanPickup/spHotSpring.png);
+  background-size: contain;   /* 全体を表示 */
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  margin: 0 auto;
+  width: 223px;
+  height: 132px;
+  margin-bottom: 20px;
+}
+.pickup_spring-name {
+  width: 223px;
+  text-align: left;
+  margin: 0 auto 20px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.pickup_spring-description {
+  margin-bottom: 20px;
+}
+.pickup_gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+}
+.pickup_image--sub1 {
+  background-image: url(../images/taiNanPickup/spHotel1.png);
+  background-size: contain;   /* 全体を表示 */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 157.5px;
+  height: 81px;
+}
+
+.pickup_image--sub2 {
+  background-image: url(../images/taiNanPickup/spHotel2.png);
+  background-size: contain;   /* 全体を表示 */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 157.5px;
+  height: 81px;
+}
+.pickup_caption {
+  width: 223px;
+  text-align: left;
+  margin: 20px auto;
+  font-family: Noto Sans JP;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.pickup_lotus {
+  display: block;
+  width: 375px;
+}
+.pickup_image--lotus1 {
+  background-image: url(../images/taiNanPickup/spLargeLotusFlower.png);
+  background-size: contain;   /* 全体を表示 */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 175px;
+  height: 122px;
+  margin: 0 auto 20px;
+}
+.pickup_lotus-description {
+  width: 223px;
+  text-align: left;
+  margin: 0 auto;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.pickup_image--lotus2 {
+  background-image: url(../images/taiNanPickup/spPictureoFalotusFlower.png);
+  background-size: contain;   /* 全体を表示 */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 175px;
+  height: 122px;
+  margin: 20px auto 40px;
+}
+
+.section-divider,
+.section-intro_divider,
+.section-gourmet_divider,
+.section-divider-end {
+  background-color: #000;
+  /* 線の幅を223ピクセルに設定 */
+  width: 223px;
+  /* 線の高さ（太さ）を1ピクセルに設定 */
+  height: 1px;
+  /* 必要に応じて、線の下のスペースを調整 */
+  margin: 0 auto;
+}
+
+/* ページ全体のスタイル */
+body {
+  position: relative;       /* 疑似要素を配置するため */
+  margin: 0;
+  min-height: 100vh;
+  z-index: 0;
+}
+
+/* 背景用の半透明黒 */
+body::before {
+  content: "";
+  position: fixed;          /* ページ全体に固定 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.10);
+  z-index: -1;              /* コンテンツの背面に配置 */
+}
+.back-to-top {
+  position: fixed;
+  left: 323px;
+  bottom: 500px;
+  cursor: pointer; 
+  z-index: 100;
+}
+.back-to-top img {
+  width: 48px;
+  height: 48px;
+}
+
+
+/* モーダルの基本設定 */
+
+.modal {
+position: fixed;
+top: 200px; left: 0;
+width: 375px; height: 375px;
+background: #f4f4f4;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 10002;
+opacity: 0;
+pointer-events: none;
+transition: opacity 0.3s ease;
+}
+
+.modal.active {
+opacity: 1;
+pointer-events: auto;
+}
+
+/* モーダルがアクティブの時 */
+.modal_overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* 追記　*/
+.modal_content {
+  background: #f4f4f4;
+  padding: 0 auto;
+  position: relative;   /* ★必須：画像位置ずれ防止 */
+  transition: transform 0.3s ease;
+}
+/* 追記　*/
+.modal_image {
+  width: 283px;
+  height: 283px;
+  object-fit: contain; /* ← ここ重要！ */
+  box-shadow: 5px 5px 10px rgba(0,0,0,.25);
+}
+/* 追記　*/
+.modal_close {
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* 背景を暗くするオーバーレイ */
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(235, 220, 194, .8); /* ← 背景を灰色にする */
+  z-index: 10001;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.modal_overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* ハンバーガーの開閉部分 */
+.hamburger {
+  flex: 0 0 48px;
+  position: fixed;
+  top: 4px;
+  right: 4px;
+  z-index: 1000;
+  /* zは100でなくても良いが入れないと背景に隠れます。 */
+
+}
+
+/* ドロワー部分 */
+#drawer {
+  line-height: 1.6;
+  background-color: #007AB7;
+  width: 225px;
+  height: 100vh;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  transform: translateX(100%);   /* 初期は画面外 */
+  transition: transform 0.3s ease
+}
+/* 開いた状態 */
+#drawer.show {
+  transform: translateX(0);
+}
+.vanish {
+  display: none;
+}
+
+/* ドロワー部分終了 */
+.drawer__header {
+  display: flex;
+  margin: 4px 4px 80px 12px;
+}
+
+.drawerIcon {
+  max-width: 100%;
+  width: 101px;
+  height: 40px;
+  margin-right: 60px;
+  transform: translateY(4px);
+}
+
+.drawer__close {
+  flex: 0 0 48px;
+}
+
+.drawer__list {
+  display: block;
+}
+
+.dItem a {
+  display: inline-block;
+  /* 文字幅＝要素幅にするため*/
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  /* 下線 */
+}
+
+.drawer__item--title {
+  margin-bottom: 60px;
+}
+
+.drawer__item--large {
+  margin-bottom: 40px;
+}
+
+.drawer__item--medium {
+  margin-bottom: 20px;
+}
+/*ローディング*/
+ /* 回転の動き */
+  .loading {
+        width: 100%;
+        height: 100vh;/* 【確認】100vhに直す？ */
+        background-color: #007AB7; /* 背景を青に */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* 👈 【追加】JavaScriptで opacity: 0 になったときに 0.5秒でフェードアウトさせる */
+        /* JavaScriptのsetTimeout(500)と一致させる */
+        transition: opacity 1.5s ease-in-out; 
+        
+        z-index: 9999; /* 他のコンテンツの上に確実に表示 */
+        position: fixed; /* 画面に固定 */
+        top: 0;
+        left: 0;
+        }
+
+.loading-logo {
+  width: 287px;
+  height: 117px;
+  margin: 0 auto;
+  animation: blink 3.5s infinite; /* アニメーションを繰り返す */
+  }
+  .hide {
+  opacity: 0;               /* フェードアウト */
+  pointer-events: none;     /* クリックを無効化 */
+  transition: 20s;         /* 変化にかける時間 */
+  display: none;            /* ← 追加：完全に消す */
+  }
+/* 点滅アニメーション */
+@keyframes blink {
+  0%   { opacity: 1; }   /* 見える */
+  50%  { opacity: 0.5; }   /* 消える */
+  100% { opacity: 1; }   /* 見える */
+}
+  /* フッター部分の修飾 */
+.linkFooter {
+    height : 349px;
+    background-color:#007AB7;
+    position:relative;
+}
+.fMark {
+    display:flex;
+    margin:0 auto ;
+    margin-bottom:20px;
+    padding-top: 20px;
+}
+.fLink {
+    width:195px;
+    height:167px;
+    margin:0 auto 80px;
+}
+.fText {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    margin-top:6px;
+    padding-bottom:5px; 
+}
+.footerSnsIcon {
+    display:inline-flex;
+    gap:11px;
+    position:absolute;
+    top:271px;
+    left :50%;
+    transform: translateX(-50%);
+}
+.footerLogo {
+    width: 78px;
+    height: 21px;
+    position: absolute;
+    top: 275px;
+    left: 50%;
+    transform: translateX(-168px);
+}
+.cRight {
+    text-align: center;
+    border-top:1px solid #03A9F4;
+    height:34px;
+    color: #ffffff;
+    padding-top: 5px;
+}
+.footerLogo img {
+    width: 78px;   /* 好きな小さいサイズに変更 */
+    height: auto;  /* アスペクト比を保つ */
+}
+small {
+    align-self:center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          /* PC版 */
+@media screen and (min-width: 768px) {
+  header {
+  width: 1366px;
+  height: 786px;
+  background: url(../images/taiNanTop/pcTainanFullHero.png);
+  background-size: 1366px 786px;
+  position: relative; /* ← 必須 */
+  margin: 0 auto;     /* 画面中央に配置 */
+  }
+  .header_main-logo {
+    position: absolute; 
+    width: 300px;         /* 必要なら変更 */
+    height: 539.82px;     /* 必要なら変更 */
+    top: 94px;
+    left: 363px;
+    background: url('../images/taiNanTop/pcTainanMainLogo.svg') no-repeat center/contain;
+    z-index: 10;
+  }
+  .header__social-icon--facebook,
+  .header__social-icon--instagram,
+  .header__social-icon--twitter {
+  padding-left: 103px;
+  padding-bottom: 40px;
+  position: relative;
+  top: 522px; /* ←これで下に512pxずらす */
+  }
+  
+  body {
+  max-width: 1366px;
+  }
+  /*.台南　メッセージ*/ 
+  h1 {
+    left: 680px;
+    bottom: 20px;
+    position: relative;
+    width: 467px;
+    color: #FFF;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, .0);
+
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  /* 画面上部固定のナビ部分 スマホ版にのみあるMENUは隠す*/
+.drawer__logo {
+        display: none;
+}
+    /* ハンバーガーメニューの消去 */
+    .hamburger {
+        display: none;
+    }
+    .drawer__close {
+        display: none;
+    }
+    .drawer__item--title {
+        display: none;
+    }
+    .drawer__item--large,
+    .drawer__item--medium {
+        margin-bottom: 0px;
+        margin-right: 20px;
+    }
+    .drawer__list {
+        display: flex;
+        margin-top: 20px;
+    }
+    .drawer__item drawer {
+        margin-right: 20px;
+    }
+    .drawer__item drawer:last-child {
+        margin-right: 0;
+    }
+    .drawer__item drawer {
+        border-bottom: none;
+    }
+    .drawer__header {
+        margin: 0;
+    }
+    .drawerIcon {
+        width: 133px;
+        height: 54px;
+        transform: none;
+        margin: 0;
+    }
+    #drawer {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1366px;
+        padding: 20px 103px;
+        height: 94px;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.25);
+        font-size: 24px;
+    }
+/*/////////////////////////////////////
+///////////// パンくずメニュー ////////////
+/////////////////////////////////////*/
+.header_nav {
+  height: 58px;
+  font-size: 20px;
+  border-bottom: #000 solid 1px;
+}
+.header_nav ul {
+    list-style: none;
+    display: flex;          /* 横並び */
+    gap: 4px;               /* 隙間調整 */
+    padding-top: 10px;
+    margin-left: 100px;
+}
+
+/*/////////////////////////////////////
+/////////////// 観光名所 ///////////////
+/////////////////////////////////////*/
+.attraction-section {
+  width: 1366px;
+  margin: 60px auto 0;
+}
+
+h2 {
+  padding-top: 44px;
+  margin-bottom: 40px;
+}
+.attraction_title-en {font-size: 48px; text-transform: capitalize;}
+.section_title-en {font-size: 48px; text-transform: capitalize;}
+.pickup_title-en {font-size: 48px; text-transform: capitalize;}
+.attraction_title-ja {font-size: 24px;}
+.section_title-ja {font-size: 24px;}
+.pickup_title-ja {font-size: 24px;}
+
+/*.attraction & 観光名所の文字の配置*/ 
+.attraction_title {
+  position: relative;
+  display: block;
+  width: 600px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  text-align: left;
+  padding-left: 200px;
+}
+/*.Gourmet & グルメの文字の配置*/ 
+.section-title {
+  position: relative;
+  display: block;
+  width: 500px;
+  margin-top: 40px;
+  margin-left: 537px;
+  margin-bottom: 60px;
+  text-align: left;
+  padding-left: 240px;
+}
+/*.Pickup & ピックアップの文字の配置*/ 
+.pickup_title {
+  position: relative;
+  display: block;
+  width: 600px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  text-align: left;
+  padding-left: 240px;
+}
+
+.attraction_title::after,
+.section-title::after,
+.pickup_title::after {
+  position: absolute;
+  top: 20px;
+  left: 360px;
+  transform: translateX(-50%);
+  width: 530px;   /* 背景画像の幅 */
+  height: 96px;   /* 背景画像の高さ */
+  background-image: url(../images/share/pcHeadingBackGroundImage.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/*.観光名称(安平老街,赤嵌楼)の文字サイズ*/ 
+.attraction_name {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 103px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+/*2コラム（安平老街と説明）*/
+.attraction_left {
+  display: flex;
+  margin-left: 103px;
+  width: 1100px; 
+}
+
+/*.観光名称(安平老街)の大判*/ 
+.attraction_image {
+  background-image: url(../images/taiNanAttraction/pcYanpingStreetMain.png);
+  background-size: cover;  
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  width: 600px;
+  height: 304px;
+  margin-bottom: 40px;
+  flex-shrink: 0;
+}
+/*.観光名称(安平老街)の説明*/ 
+.attraction_description {
+  margin: 0 0 0 60px;
+  padding: 40px;
+  flex: 0 0 500px;
+  height: 304px;
+  box-sizing: border-box;
+  background-color: rgba(100, 201, 155, .8);
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-size : 20px;
+  line-height: 1.6;
+  color: #000;
+}
+/*2コラム（イメージ２つとその説明）*/
+.attraction_right {
+  display: flex;
+  margin-left: 103px;
+  width: 1100px; 
+}
+.attraction_tower_image {
+  background-image: url(../images/taiNanAttraction/spAkakuroMain.png);
+  background-size: cover;  
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  width: 295px;
+  height: 221px;
+  background-size: cover; 
+  margin-bottom: 20px;
+}
+/*2コラム（イメージ２つ）*/
+.attraction_gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 0 0 50px;
+  width: 600px;
+  flex: 0 0 600px;
+  gap: 20px;
+}
+/*イメージその１*/
+.attraction_gallery-image1 {
+  background-image: url(../images/taiNanAttraction/pcYanpingStreetMain1.png);
+  background-size: cover;  
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 290px;
+  height: 167px;
+  background-size: cover; 
+}
+/*イメージその２*/
+.attraction_gallery-image2 {
+  background-image: url(../images/taiNanAttraction/pcYanpingStreetMain2.png);
+  background-size: cover;  
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 290px;
+  height: 167px;
+  background-size: cover;
+}
+.attraction_gallery img {
+  width: 290px;
+  height: auto;
+  display: block;
+} 
+
+/*イメージのその説明*/
+.attraction_info {
+  width: 500px;
+  height: 167px;
+  padding: 48px 40px;
+  margin:0 0 0 60px;
+  flex: 0 0 500px;
+  background-color: rgba(100, 201, 155, .8);
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+}
+.section-divider {
+  background-color: #000;
+  /* 線の幅を223ピクセルに設定 */
+  width: 480px;
+  /* 線の高さ（太さ）を1ピクセルに設定 */
+  height: 1px;
+  /* 必要に応じて、線の下のスペースを調整 */
+  margin: 0 auto;
+}
+
+/*.グルメ見出し文の強調線*/
+.section-intro_divider {
+  background-color: #000;
+  /* 線の幅を223ピクセルに設定 */
+  width: 420px;
+  /* 線の高さ（太さ）を1ピクセルに設定 */
+  height: 1px;
+  /* 必要に応じて、線の下のスペースを調整 */
+  margin: 0 auto;
+}
+/*.グルメの区切り線*/
+.section-gourmet_divider {
+  background-color: #000;
+  /* 線の幅を223ピクセルに設定 */
+  width: 510px;
+  /* 線の高さ（太さ）を1ピクセルに設定 */
+  height: 1px;
+  /* 必要に応じて、線の下のスペースを調整 */
+  margin: 0 auto;
+}
+
+.attraction_tower {
+  width: auto;
+  margin: 0;
+}
+.gourmet-container {
+  width: 100%;
+  max-width: 1366px;
+  margin-left: 143px;
+}
+
+/*.観光名称(赤崁楼)の大判*/
+.attraction_tower_image {
+  background-image: url(../images/taiNanAttraction/pcAkakuroMain.png);
+  background-size: cover;  
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  width: 600px;
+  height: 336px;
+  margin-bottom: 40px;
+  flex-shrink: 0;
+}
+/*.観光名称(赤崁楼)の説明*/ 
+.attraction_tower_description {
+  margin: 0 0 0 60px;
+  padding: 40px;
+  flex: 0 0 500px;
+  height: 336px;
+  box-sizing: border-box;
+  background-color: rgba(100, 201, 155, .8);
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-size : 20px;
+  line-height: 1.6;
+  color: #000;
+}
+/*2コラム（イメージ２つ）*/
+.attraction-tower_gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 0 0 50px;
+  width: 600px;
+  flex: 0 0 600px;
+  gap: 20px;
+}
+/*イメージその１*/
+.attraction_tower_image1 {
+  background-image: url(../images/taiNanAttraction/spAkakuroSubMain1.png);
+  width: 290px;
+  height: 167px;
+  background-size: cover; 
+}
+/*イメージその２*/
+.attraction_tower_image2 {
+  background-image: url(../images/taiNanAttraction/spAkakuroSubMain2.png);
+  width: 290px;
+  height: 167px;
+  background-size: cover;
+}
+.attraction-tower_gallery img {
+  width: 290px;
+  height: auto;
+  display: block;
+} 
+/*イメージのその説明*/
+.attraction_tower_info {
+  width: 500px;
+  height: 167px;
+  padding: 40px 40px 100px;
+  margin:0 0 0 60px;
+  flex: 0 0 500px;
+  background-color: rgba(100, 201, 155, .8);
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+}
+/* 　営業時間　*/
+.attraction_time {
+  text-align: center;
+  margin-top: 40px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+}
+/* グルメの文章　*/
+.section-intro {
+  margin: 60px 0;
+  width: 420px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+}
+.gourmet-list {
+  display: flex;
+  gap: 60px;
+}
+/* 担仔麺の全体の配置の大きさ　PC版　*/
+.gourmet-card--ramen {
+  width: 510px;
+  margin: 0 auto 40px;
+}
+/* 蝦仁飯の全体の配置の大きさ　PC版*/
+.gourmet-card--rice {
+  width: 510px;
+  margin: 0 auto 40px;
+}
+/* 担仔麺とタンツーメンの横並び、蝦仁飯とエビ飯の横並び*/
+.gourmet-card-header {
+  display: flex;
+  margin: 60px 0 20px;
+  gap: 20px;
+}
+/* 担仔麺と蝦仁飯の文字について　*/
+.gourmet_title-ch {
+  margin: 0;
+  font-size: 36px;
+  text-align: center;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+}
+/* タンツーメンとエビ飯の文字について　*/
+.gourmet_title-ja {
+  font-size: 24px;
+  margin: 12px 0 0 0;
+  text-align: center;
+  margin-bottom: 5px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+}
+/* 担仔麺の画像の大きさ　PC版　*/
+.gourmet-card-image--ramen {
+  display: block;
+  background-image: url(../images/taiNanGourmet/pcDoshougetsu.png);
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  width: 510px;
+  height: 220px;
+}
+/* 蝦仁飯の画像の大きさ　PC版　*/
+.gourmet-card-image--rice {
+  display: block;
+  background-image: url(../images/taiNanGourmet/pcATsaiCheng.png);
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  width: 510px;
+  height: 220px;
+}
+/* 担仔麺の説明文　PC版　*/
+.gourmet-description {
+  width: 510px;
+  text-align: left;
+  margin: 20px auto;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+}
+/* 蝦仁飯の説明文　PC版　*/
+.gourmet-card-description {
+  width: 510px;
+  text-align: left;
+  margin: 20px auto;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+}
+/* ”画像を見る”の文字の配置　PC版　*/
+.gourmet-card-action {
+  width: 510px;
+  margin: 40px auto;
+  text-align: left;
+}
+/* ”画像を見る”の文字の大きさ　PC版　*/
+.modal_trigger {
+  font-size: 20px;
+}
+/*///////////////////////////
+/// グルメの２段目について  ///
+//////////////////////////*/
+
+/* 小籠包の全体の配置の大きさ　PC版　*/
+.gourmet-item--shoronpo {
+  width: 510px;
+  margin: 0 auto 40px;
+}
+/* 鴨肉飯の全体の配置の大きさ　PC版*/
+.gourmet-item--duckrice {
+  width: 510px;
+  margin: 0 auto 40px;
+}
+/* 小籠包とショウロンポーの横並び、鴨肉飯とヤーロウファンの横並び*/
+.gourmet-item_header {
+  display: flex;
+  margin: 60px 0 20px;
+  gap: 20px;
+}
+/* 小籠包と鴨肉飯の文字について　*/
+.gourmet_title-ch {
+  margin: 0;
+  font-size: 36px;
+  text-align: center;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+}
+/* ショウロンポーとヤーロウファンの文字について　*/
+.gourmet_title-ja {
+  font-size: 24px;
+  margin: 12px 0 0 0;
+  text-align: center;
+  margin-bottom: 5px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+}
+/* 小籠包の画像の大きさ　PC版　*/
+.gourmet-item_image--shoronpo {
+  display: block;
+  background-image: url(../images/taiNanGourmet/pcDoshougetsu.png);
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  width: 510px;
+  height: 220px;
+}
+/* 鴨肉飯の画像の大きさ　PC版　*/
+.gourmet-item_image--duckrice {
+  display: block;
+  background-image: url(../images/taiNanGourmet/pcATsaiCheng.png);
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  width: 510px;
+  height: 220px;
+}
+/* 小籠包と鴨肉飯の説明文　PC版　*/
+.gourmet-item_description {
+  width: 510px;
+  text-align: left;
+  margin: 20px auto;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* ”画像を見る”の文字の配置　PC版　*/
+.gourmet-item_action {
+  width: 510px;
+  margin: 40px auto;
+  text-align: left;
+}
+/* ピックアップのサブタイトルの配置　PC版　*/
+.pickup_title-image {
+  display: block;
+  width: 420px;
+  margin-left: 143px;
+}
+/* ピックアップのサブタイトルの大きさ　PC版　*/
+.pickup_subtitle {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 12px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+}
+/* ピックアップのサブタイトルの文書　PC版　*/
+.pickup_intro {
+  margin: 0 auto;
+  width: 420px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* 2コラム(Main(画像)とsub（説明文）)PC版　*/
+.pickup_hot-spring-image {
+  display: flex;
+  align-items: flex-start;  
+  gap: 60px;       
+}
+
+/* 温泉宿の画像１　PC版　*/
+.pickup_image--main {
+  background-image: url(../images/taiNanPickup/pcHotSpring.png);
+  background-size: contain; 
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  width: 600px;
+  height: 340px;
+  margin-left: 143px;
+  flex: 0 0 600px;   /* ← これ重要 */
+}
+/* 温泉宿の説明文　PC版　*/
+.pickup_spring-name{
+  width: 420px;
+  flex: 0 0 420px;   /* ← 追加 */
+  text-align: left;
+  padding-top: 74px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+}
+/* ２コラム　温泉宿の画像１と画像２　PC版　*/
+.pickup_gallery {
+  display: flex;
+  justify-content: flex-start; 
+  gap: 60px;
+  margin: 60px 0 60px 143px; /* ← 左揃え */
+  width: 1080px;        /* ← 追加（超重要） */
+}
+/* 温泉宿の画像１　PC版　*/
+.pickup_image--sub1 {
+  width: 510px;
+  height: 214px; 
+  background-image: url(../images/taiNanPickup/pcHotel1.png);
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 0 0 510px;   /* ← flex固定（重要） */
+}
+/* 温泉宿の画像２　PC版　*/
+.pickup_image--sub2 {
+  width: 510px;
+  height: 214px; 
+  background-image: url(../images/taiNanPickup/pcHotel2.png);
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 0 0 510px;   /* ← flex固定（重要） */
+}
+/* 温泉宿のコメント　PC版　*/
+.pickup_caption {
+  width: 1366px;
+  margin-bottom: 60px;
+  text-align: center;
+  font-family: Noto Sans JP;
+  font-weight: 400;
+  font-size: 20px;
+}
+/* 2コラム(画像とコメント)　PC版　*/
+.pickup_lotus {
+  display: flex;
+  align-items: center;
+  margin: 0 auto 60px;
+  width: 1220px;        
+}
+/* 画像1の大きさ　PC版　*/
+.pickup_image--lotus1 {
+  background-image: url(../images/taiNanPickup/pcLargeLotusFlower.png);
+  background-size: contain;   /* 全体を表示 */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 325px;
+  margin: 0 60px 0 143px;
+}
+
+.pickup_losus2 {
+  display: block;
+  width: 420px;
+}
+
+/* 画像のコメント　PC版　*/
+.pickup_lotus-description {
+  width: 420px;
+  text-align: left;
+  margin: 0 auto;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+}
+/* 画像２の大きさ　PC版　*/
+.pickup_image--lotus2 {
+  background-image: url(../images/taiNanPickup/pcPictureoFalotusFlower.png);
+  background-size: contain;   /* 全体を表示 */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 420px;
+  height: 209px;
+  margin: 20px auto 0;
+}
+.section-divider-end {
+  background-color: #000;
+  /* 線の幅を223ピクセルに設定 */
+  width: 480px;
+  /* 線の高さ（太さ）を1ピクセルに設定 */
+  height: 1px;
+  /* 必要に応じて、線の下のスペースを調整 */
+  margin: 0 450px 0;
+}
+
+/* フッター部分の修飾 */
+        .linkFooter {
+            height : 489px;
+            margin-top: 60px;
+            background-color:#007AB7;
+            position:relative;
+        }
+        .fMark {
+            display:flex;
+            margin:0 auto;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            width: 64px;
+            height: 48px;
+        }
+        .fLink {
+            width: 332px;
+            height: 240px;
+            margin-left: 103px;
+            margin-top: 150px;
+        }
+        .fText {
+            font-size: 20px;
+            color: #fff;
+            border-bottom: 1px solid #fff;
+            margin-top: 6px;
+            margin-bottom: 12px; 
+        }
+        .footerSnsIcon{
+            display: inline-flex;
+            gap: 40px;
+            position: absolute;
+            top: 376px;
+            left: 1085px;
+            transform: translateX(-50%);
+        }
+        .footerLogo {
+            width: 256px;
+            height: 103px;
+            position: absolute;
+            top: 305px;
+            left: 50%;
+            transform: translateX(-168px);
+        }
+
+        .footerLogo img {
+            width: 256px;
+            height: 103px;
+            display: block;
+        }
+
+        .cRight {
+            position: absolute;
+            bottom: 0;   
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            border-top: 1px solid #03A9F4;
+            height: 52px;
+            padding-top: 10px;
+            color: #ffffff;
+            font-size: 12px;
+            font-family: 'Noto Sans JP';
+                }
+        small{
+            align-self: center;
+
+        }
+
+        .fTextTop {
+            display: none;
+        }
+/* ”TOPへ戻るボタン”の配置 PC版*/
+.back-to-top {
+  position: fixed;
+  left: 1246px;
+  bottom: 50px;
+  cursor: pointer; 
+  z-index: 100;
+}
+/* ”TOPへ戻るボタン”の大きさ PC版*/
+.back-to-top img {
+  width: 100px;
+  height: 100px;
+}
+
+/* モーダルの基本設定 PC版*/
+.modal {
+position: fixed;
+top: 200px; left: 350PX;
+width: 675px; height: 675px;
+background: #f4f4f4;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 10002;
+opacity: 0;
+pointer-events: none;
+transition: opacity 0.3s ease;
+}
+/* モーダルの画像　PC版　*/
+.modal_image {
+  width: 555px;
+  height: 555px;
+  object-fit: contain;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.25);
+}
+
+}
